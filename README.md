@@ -35,7 +35,7 @@ AliyunOSS 是阿里云 OSS 官方 SDK 的 Composer 封装，支持任何 PHP 项
 
 ```json
 require: {
-    "johnlui/aliyun-oss": "~2.0"
+    "shrekuu/aliyun-oss": "~2.2"
 }
 ```
 
@@ -46,14 +46,14 @@ require: {
 运行命令：
 
 ```bash
-composer require johnlui/aliyun-oss:~2.0
+composer require shrekuu/aliyun-oss
 ```
 
 ## 使用（以 Laravel 为例）
 
 ### 构建 Service 文件
 
-新建 `app/services/OSS.php`，内容可参考：[OSS.php](https://github.com/johnlui/AliyunOSS/blob/master/example/OSS.php)，然后修改配置：
+新建 `app/services/OSS.php`，内容可参考：[OSS.php](https://github.com/shrekuu/AliyunOSS/blob/master/example/OSS.php)，然后修改配置：
 
 ```php
 ... ...

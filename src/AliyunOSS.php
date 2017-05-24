@@ -54,12 +54,12 @@ class AliyunOSS
     '迪拜' => 'oss-me-east-1-internal',
   ];
 
-  public function __construct($city, $networkType, $isInternal, $AccessKeyId, $AccessKeySecret)
+  public function __construct($city, $networkType, $isInternal, $AccessKeyId, $AccessKeySecret, $userSSL = false)
   {
     $this->city = $city;
     $this->networkType = $networkType;
 
-    if ($this->useSSL) {
+    if ($userSSL) {
         $serverAddress = 'https://';
     } else {
         $serverAddress = 'http://';
@@ -87,18 +87,10 @@ class AliyunOSS
     ]);
   }
 
-  public static function boot($city, $networkType, $isInternal, $AccessKeyId, $AccessKeySecret)
+  public static function boot($city, $networkType, $isInternal, $AccessKeyId, $AccessKeySecret, $useSSL = false)
   {
-    return new self($city, $networkType, $isInternal, $AccessKeyId, $AccessKeySecret);
+    return new self($city, $networkType, $isInternal, $AccessKeyId, $AccessKeySecret, $useSSL);
   }
-
-    /**
-     * @param boolean $useSSL
-     */
-    public function setUseSSL($useSSL)
-    {
-        $this->useSSL = $useSSL;
-    }
 
   public function setBucket($bucket)
   {
