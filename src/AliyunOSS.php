@@ -54,12 +54,12 @@ class AliyunOSS
     '迪拜' => 'oss-me-east-1-internal',
   ];
 
-  public function __construct($city, $networkType, $isInternal, $AccessKeyId, $AccessKeySecret, $userSSL = false)
+  public function __construct($city, $networkType, $isInternal, $AccessKeyId, $AccessKeySecret, $useSSL = false)
   {
     $this->city = $city;
     $this->networkType = $networkType;
 
-    if ($userSSL) {
+    if ($useSSL) {
         $serverAddress = 'https://';
     } else {
         $serverAddress = 'http://';
