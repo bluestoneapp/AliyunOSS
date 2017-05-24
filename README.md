@@ -15,6 +15,7 @@ AliyunOSS 是阿里云 OSS 官方 SDK 的 Composer 封装，支持任何 PHP 项
 
 ## 更新记录
 
+* 2017-05-24 `Release v2.2.2` 增加对 ssl 的支持(shrekuu)
 * 2017-03-08 `Release v2.0.0` v2 发布，在 API 易用性上进行了大量优化
 * 2016-09-12 `Release v1.3.5` 加入文件元信息的设置功能
 * 2016-07-20 `Release v1.3.4` 加入文件元信息的获取功能

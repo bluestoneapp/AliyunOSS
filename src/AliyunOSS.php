@@ -19,6 +19,7 @@ class AliyunOSS
   protected $networkType;
   protected $ossClient;
   protected $bucket;
+  protected $useSSL = false;
 
   protected $CityURLArray = [
     '杭州' => 'oss-cn-hangzhou',
@@ -58,7 +59,11 @@ class AliyunOSS
     $this->city = $city;
     $this->networkType = $networkType;
 
-    $serverAddress = 'http://';
+    if ($this->useSSL) {
+        $serverAddress = 'https://';
+    } else {
+        $serverAddress = 'http://';
+    }
     if ($networkType == '经典网络') {
       if (!array_key_exists($city, $this->CityURLArray)) {
         throw new Exception("城市不存在");
@@ -86,6 +91,14 @@ class AliyunOSS
   {
     return new self($city, $networkType, $isInternal, $AccessKeyId, $AccessKeySecret);
   }
+
+    /**
+     * @param boolean $useSSL
+     */
+    public function setUseSSL($useSSL)
+    {
+        $this->useSSL = $useSSL;
+    }
 
   public function setBucket($bucket)
   {
