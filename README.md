@@ -93,7 +93,7 @@ composer require shrekuu/aliyun-oss
 use App\Services\OSS;
 
 // 在外网上传一个文件并指定 options 如：Content-Type 类型
-// 更多 options 见：https://github.com/johnlui/AliyunOSS/blob/master/src/oss/src/Aliyun/OSS/OSSClient.php#L142-L148
+// 更多 options 见：https://github.com/shrekuu/AliyunOSS/blob/master/src/oss/src/Aliyun/OSS/OSSClient.php#L142-L148
 OSS::publicUpload('bucket', '目标 object 名', '本地文件路径', [
     'ContentType' => 'application/pdf',
     ... ...
