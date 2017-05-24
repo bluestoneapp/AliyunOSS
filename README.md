@@ -100,7 +100,7 @@ OSS::publicUpload('bucket', '目标 object 名', '本地文件路径', [
 ]);
 ```
 
-更多用法等待着你去[发现](https://github.com/johnlui/AliyunOSS/blob/master/example/OSS.php)。
+更多用法等待着你去[发现](https://github.com/shrekuu/AliyunOSS/blob/master/example/OSS.php)。
 
 ## 反馈
 
